@@ -133,14 +133,17 @@ class ATM:
                 continue
 
 
-# Main class
-class Main:
+# # Main class
+# class Main:
 
-    @staticmethod
-    def main():
-        atm = ATM()
-        atm.inputAmount()
+#     @staticmethod
+#     def main():
+#         atm = ATM()
+#         atm.inputAmount()
 
 
-# Program starts here
-Main.main()
+# # Program starts here
+# Main.main()
+
+atm =ATM()
+atm.inputAmount()
