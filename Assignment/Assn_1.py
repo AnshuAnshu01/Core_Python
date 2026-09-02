@@ -2,7 +2,7 @@ def get_amount(text):
     while True:
         amount = input(text)
 
-        if amount.replace(".", "", 1).isdigit():
+        if amount.replace(".", "").isdigit():
             return float(amount)
 
         print("Please enter a valid number.")
