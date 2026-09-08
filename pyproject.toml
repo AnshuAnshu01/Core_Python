@@ -2,4 +2,7 @@
 name = "python"
 version = "0.1.0"
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "flasgger>=0.9.7.1",
+    "flask-cors>=6.0.5",
+]
