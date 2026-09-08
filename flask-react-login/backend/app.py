@@ -18,7 +18,7 @@ def login():
     username = data.get("username")
     password = data.get("password")
 
-    if username == "admin" and password == "1234":
+    if username == "admin" and password == "125634":
         return jsonify({
             "success": True,
             "message": "Login successful!"
