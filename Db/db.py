@@ -1,5 +1,5 @@
-from flask import Flask, request
-import pymysql
+from flask import Flask, render_template, request
+import pymysql  # pyright: ignore[reportMissingImports]  # type: ignore[import-not-found]
 import os
 from dotenv import load_dotenv
 
@@ -34,28 +34,16 @@ def home():
 
         return "User added successfully"
 
-    return """
-    <html>
-    <body>
-        <h2>Add User</h2>
+    return render_template("index.html")
 
-        <form method="POST">
+@app.route("/base", methods=["GET"])
+def users():
 
-            <label>Name:</label>
-            <input type="text" name="name" required>
-            <br><br>
+    return render_template("base.html")
 
-            <label>Email:</label>
-            <input type="email" name="email" required>
-            <br><br>
-
-            <button type="submit">Add User</button>
-
-        </form>
-    </body>
-    </html>
-    """
-
+@app.route("/reg", methods=["GET"])
+def register():
+    return render_template("reg.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
