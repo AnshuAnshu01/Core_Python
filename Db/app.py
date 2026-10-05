@@ -91,6 +91,7 @@ def delete_user_by_id(user_id):
     cursor.execute(check_query, (user_id,))
 
     user = cursor.fetchone()
+    
 
     if user is None:
 
