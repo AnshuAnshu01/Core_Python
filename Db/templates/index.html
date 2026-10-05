@@ -17,5 +17,16 @@
         <br><br>
 
         <button type="submit">Add User</button>
+        
+    </form>
+     <br><br>
+      <form action="/delete_user" method="POST">
+
+        <label for="delete_id">User ID:</label>
+        <input type="number" id="delete_id" name="id" required>
+
+        <button type="submit">Delete User</button>
+
     </form>
 {% endblock %}
+
